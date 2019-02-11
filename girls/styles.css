@@ -1,0 +1,283 @@
+/*шрифты*/
+@font-face {
+	font-family: "Days Sans Black";
+	src: url("fonts/Days Sans Black/Days Sans Black.otf");
+}
+
+@font-face {
+	font-family: "OpenSans";
+	src: url("fonts/open-sans/OpenSans-Regular.ttf")
+}
+
+
+
+
+html {
+	font-size: 16px;
+}
+/*--------------------------------------------------------*/
+
+body {
+	height: 100vh; 
+	background: radial-gradient(at top, RGB(254,255,239), RGB(127,134,126)); 
+	overflow: hidden;
+	}
+/*--------------------------------------------------------*/
+
+/*ссылки*/
+.seat {
+	display: inline-block;
+	text-align: center;
+	padding: 2%;
+}
+
+input[type="radio"]:checked + .seat {
+	border-bottom: 2px solid;
+	border-bottom-color: rgb(187,170,124);
+}
+
+.seat:hover {
+	border-bottom: 2px solid;
+	border-bottom-color: rgb(187,170,124);
+}
+
+.logo {
+	visibility: hidden;
+}
+
+/*--------------------------------------------------------*/
+
+/*работа с info*/
+/*#info {
+	text-align: left;
+	line-height: 1.3;
+	margin: 0;
+}*/
+/*--------------------------------------------------------*/
+
+/*описание*/
+.menu {
+	height: 100px;
+	padding: 2%;
+	padding-bottom: 0;
+	margin-left: 2%;
+	text-align: left;
+	line-height: 160%;
+	}
+
+input[type="radio"]{display: none;}
+/*--------------------------------------------------------*/
+
+/*номера телефонов*/
+#number {
+	text-align: left;
+	margin-top: 2%;
+	color: rgb(187,170,124);
+	font-weight: bolder;
+}
+/*--------------------------------------------------------*/
+
+/*общий класс*/
+.girls {
+	height: 90vh;
+	display: flex; 
+	justify-content: space-around; 
+	align-items: center; 
+	flex-wrap: wrap;
+	overflow-y: scroll;
+}
+/*--------------------------------------------------------*/
+
+/*все девочки*/
+.card {
+	width: 25%;	
+	position: relative;
+	text-align: center;
+	margin-left:  3%;
+	margin-right: 3%;
+	transition: transform 400ms;
+	box-shadow: 0 10px 4px -4px rgba(0, 0, 0, .2);
+	}
+
+.card img {	
+	max-width: 100%;
+	width: 100%;
+	display: block;
+}
+
+.card h2 {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 2%; 
+	text-align: center; 
+	text-transform: uppercase;
+	font-family: "Days Sans Black";
+}
+
+.card h2:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 35px;
+	display: block;
+	height: 2px;
+	width: 50%;
+	margin: auto;
+	background: #000;
+}
+
+
+.card p {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 14%; 
+	text-align: center; 
+	text-transform: uppercase;
+	font-family: "Days Sans Black";
+}
+
+.card footer {
+	width: 100%;
+	background-color: rgb(231,233,220);
+	font-family: "OpenSans";
+}
+
+.card:hover {
+	transform: scale(1.2);
+}
+/*--------------------------------------------------------*/
+
+/*связка с меню*/
+#hotels:checked ~ .menu .hotels-info{
+ 	display: block;
+}
+.hotels-info {
+ 	display: none;
+}
+
+#places:checked ~ .menu .places-info{
+	display: block;
+}
+.places-info {
+	display: none;
+}
+
+#reastaurants:checked ~ .menu .reastaurants-info{
+	display: block;
+}
+.reastaurants-info {
+	display: none;
+}
+
+#offices:checked ~ .menu .offices-info{
+	display: block;
+}
+.offices-info {
+	display: none;
+}
+
+
+
+#hotelsCH:checked ~ .menu .hotels-info{
+  display: block;
+}
+.hotels-info {
+  display: none;
+}
+
+#placesCH:checked ~ .menu .places-info{
+	display: block;
+}
+.places-info {
+	display: none;
+}
+
+#reastaurantsCH:checked ~ .menu .reastaurants-info{
+	display: block;
+}
+.reastaurants-info {
+	display: none;
+}
+
+#officesCH:checked ~ .menu .offices-info{
+	display: block;
+}
+.offices-info {
+	display: none;
+}
+
+
+
+#hotelsPH:checked ~ .menu .hotels-info{
+  display: block;
+}
+.hotels-info {
+  display: none;
+}
+
+#placesPH:checked ~ .menu .places-info{
+	display: block;
+}
+.places-info {
+	display: none;
+}
+
+#reastaurantsPH:checked ~ .menu .reastaurants-info{
+	display: block;
+}
+.reastaurants-info {
+	display: none;
+}
+
+#officesPH:checked ~ .menu .offices-info{
+	display: block;
+}
+.offices-info {
+	display: none;
+}
+
+
+/*--------------------------------------------------------*/
+
+/*адаптив*/
+@media screen and (max-width: 800px) {
+	.card {
+		width: 100%;
+		/*margin:20px;*/
+		margin-top: 5%;
+	}
+
+	.card:hover {
+	transform: none;
+	}
+	
+	.sign {
+		visibility: hidden;
+	}
+
+	.logo {
+		visibility: visible;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.card h2 {
+		font-size: 1.2rem;
+	}
+
+	.seat {
+		font-size: 0.6rem;
+	}
+}
+
+
+
+
+
+
+
+
+
